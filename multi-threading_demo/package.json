@@ -1,0 +1,17 @@
+{
+  "name": "multi-threading_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "single-thread": "cd single-thread && node index.js",
+    "multi-thread": "cd multi-thread && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "seta-trungvuong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

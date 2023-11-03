@@ -1,0 +1,17 @@
+{
+  "name": "child-processes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "exec-list-files": "cd 1-exec && node listFiles.js",
+    "exec-get-image": "cd 1-exec && node getNodejsImage.js",
+    "spawn-find-files": "cd 2-spawn && node findFiles.js",
+    "fork-server": "cd 3-fork && node httpServer_fork.js",
+    "server": "cd 3-fork && node httpServer.js",
+    "test-hello": "curl http://localhost:8000/hello",
+    "test-total": "curl http://localhost:8000/total"
+  },
+  "author": "seta-trungvuong",
+  "license": "ISC"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "cluster_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-clustering": "node primary.js",
+    "get-heavy": "curl http://localhost:3000/heavy",
+    "pm2-start": "pm2 start index.js -i 0",
+    "pm2-log": "pm2 log",
+    "pm2-ls": "pm2 ls",
+    "pm2-delete": "pm2 ls",
+    "pm2-start-config": "pm2 start ecosystem.config.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "seta-trungvuong",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
