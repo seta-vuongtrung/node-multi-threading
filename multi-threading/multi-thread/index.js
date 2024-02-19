@@ -1,15 +1,15 @@
 const express = require("express");
 const os = require("os");
 const { Worker } = require("worker_threads");
-const THREAD_COUNT = os.cpus().length * 100;
+const THREAD_COUNT = os.cpus().length;
 console.log("🚀 THREAD_COUNT:", THREAD_COUNT);
 
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get("/non-blocking/", (req, res) => {
-  res.status(200).send("This page is non-blocking");
+app.get("/ping/", (req, res) => {
+  res.status(200).send("pong");
 });
 
 function createWorker() {
@@ -26,7 +26,7 @@ function createWorker() {
   });
 }
 
-app.get("/blocking", async (req, res) => {
+app.get("/heavy-task", async (req, res) => {
   const workerPromises = [];
   for (let i = 0; i < THREAD_COUNT; i++) {
     workerPromises.push(createWorker());
